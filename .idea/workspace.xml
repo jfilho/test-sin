@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f6c0a83-3dcb-4055-9b81-c9da3db134b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AlunoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlunoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Scopes/Aluno/FormSearchScope.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/aluno/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aluno/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Aluno.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Aluno.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Turma.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Turma.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -32,7 +31,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Scopes/Turma" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/matricula" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -40,6 +39,7 @@
       <recent name="C:\Users\User\Projetos\test-sin2\resources\views\layouts" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Projetos\test-sin2\resources\views\matricula" />
       <recent name="C:\Users\User\Projetos\test-sin2\app\Http\Scopes\Turma" />
       <recent name="C:\Users\User\Projetos\test-sin2\resources\views\turma" />
       <recent name="C:\Users\User\Projetos\test-sin2\app\Http\Requests" />
@@ -54,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604261749377</updated>
-      <workItem from="1604261750477" duration="20706000" />
+      <workItem from="1604261750477" duration="23762000" />
     </task>
     <servers />
   </component>

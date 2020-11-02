@@ -39,4 +39,9 @@ class Aluno extends Model
     {
         return $this->hasOne(Endereco::class, 'id_aluno', 'id')->withDefault();
     }
+
+    public function matricula()
+    {
+        return $this->hasOne(Matricula::class, 'id_aluno', 'id')->withDefault();
+    }
 }

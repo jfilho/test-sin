@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/.env" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/.env.example" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/.gitignore" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/AlunoController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/MatriculaController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/TurmaController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Requests/AlunoRequest.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Requests/EnderecoRequest.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Requests/MatriculaRequest.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Requests/TurmaRequest.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Scopes/Aluno/FormSearchScope.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Scopes/Turma/FormSearchScope.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Models/Aluno.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Models/Endereco.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Models/Matricula.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Models/Scopes/AlunoScopeTrait.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Models/Turma.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" charset="UTF-8" />
@@ -28,6 +32,10 @@
     <file url="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layouts/partials/flash_message.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layouts/partials/menu.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/matricula/create.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/matricula/edit.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/matricula/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/matricula/partials/form.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/turma/create.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/turma/edit.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/turma/index.blade.php" charset="UTF-8" />

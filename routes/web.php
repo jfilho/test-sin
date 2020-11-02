@@ -18,5 +18,6 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('/alunos', App\Http\Controllers\AlunoController::class);
     Route::resource('/turmas', App\Http\Controllers\TurmaController::class);
+    Route::resource('/matriculas', App\Http\Controllers\MatriculaController::class);
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });

@@ -6,7 +6,7 @@
         <a class="nav-link" href="{{ route('turmas.index') }}">{{ __('Turmas') }}</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">{{ __('Matrículas') }}</a>
+        <a class="nav-link" href="{{ route('matriculas.index') }}">{{ __('Matrículas') }}</a>
     </li>
     <li class="nav-item dropdown">
         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

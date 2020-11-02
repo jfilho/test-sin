@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Turma extends Model
+class Matricula extends Model
 {
     use HasFactory;
 
@@ -15,11 +15,17 @@ class Turma extends Model
      * @var array
      */
     protected $fillable = [
-        'nome',
+        'id_aluno',
+        'id_turma',
     ];
 
-    public function matricula()
+    public function aluno()
     {
-        return $this->hasOne(Matricula::class, 'id_turma', 'id')->withDefault();
+        return $this->belongsTo(Aluno::class,'id_aluno', 'id');
+    }
+
+    public function turma()
+    {
+        return $this->belongsTo(Turma::class, 'id_turma', 'id');
     }
 }
