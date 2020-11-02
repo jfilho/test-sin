@@ -3,7 +3,7 @@
         <a class="nav-link" href="{{ route('alunos.index') }}">{{ __('Alunos') }}</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">{{ __('Turmas') }}</a>
+        <a class="nav-link" href="{{ route('turmas.index') }}">{{ __('Turmas') }}</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="#">{{ __('Matrículas') }}</a>

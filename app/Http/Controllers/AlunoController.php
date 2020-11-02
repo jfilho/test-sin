@@ -18,10 +18,12 @@ class AlunoController extends Controller
      */
     public function index()
     {
-        $alunos = (new Aluno())
-            ->newQuery()
-            ->withGlobalScope('AlunoSearch', FormSearchScope::class)
-            ->simplePaginate();
+        $alunos = (new Aluno())->newQuery();
+        if (request()->get('nome')) {
+            $alunos->where('nome', 'LIKE', '%' . request()->get('nome') . '%');
+        }
+
+        $alunos = $alunos->simplePaginate();
 
         return view('aluno.index', compact('alunos'));
     }
