@@ -4,7 +4,7 @@
         @method('PUT')
     @endif
 
-    <h5>Dados Pessoais</h5>
+    <h5>{{__('Dados Pessoais')}}</h5>
     <hr/>
     <div class="form-row">
         <div class="form-group col-md-8">
@@ -29,14 +29,20 @@
         </div>
         <div class="form-group col-md-4">
             <label for="cpf">{{ __('CPF') }}</label>
-            <input id="cpf" type="text" class="form-control" name="cpf" value="{{ $aluno->cpf ?? old('cpf') }}">
-            <small>Somente números</small>
+            <input id="cpf" type="text" v-mask="['###.###.###-##']" class="form-control" name="cpf" value="{{ $aluno->cpf ?? old('cpf') }}">
+            <small>{{__('Somente números')}}</small>
         </div>
     </div>
-    <h5>Endereço</h5>
+    <h5>{{__('Endereço')}}</h5>
     <hr />
     <div class="form-row">
-        <div class="form-group col-md-10">
+        <div class="form-group col-md-2" >
+            <label for="cep">{{ __('CEP') }}</label>
+            <input id="cep" @blur="getzipcode" type="text" v-mask="['#####-###']" class="form-control" name="cep" value="{{ isset($aluno) ? $aluno->endereco->cep : old('cep') }}">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
             <label for="logradouro">{{ __('Logradouro') }}</label>
             <input id="logradouro" type="text" class="form-control" name="logradouro" value="{{ isset($aluno) ? $aluno->endereco->logradouro : old('logradouro') }}">
         </div>
@@ -44,35 +50,35 @@
             <label for="numero">{{ __('Número') }}</label>
             <input id="numero" type="text" class="form-control" name="numero" value="{{ isset($aluno) ? $aluno->endereco->numero : old('numero') }}">
         </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
             <label for="complemento">{{ __('Complemento') }}</label>
             <input id="complemento" type="text" class="form-control" name="complemento" value="{{ isset($aluno) ? $aluno->endereco->complemento : old('complemento') }}">
         </div>
-        <div class="form-group col-md-6">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-5">
             <label for="bairro">{{ __('Bairro') }}</label>
             <input id="bairro" type="text" class="form-control" name="bairro" value="{{ isset($aluno) ? $aluno->endereco->bairro : old('bairro') }}">
         </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-5">
             <label for="cidade">{{ __('Cidade') }}</label>
             <input id="cidade" type="text" class="form-control" name="cidade" value="{{ isset($aluno) ? $aluno->endereco->cidade : old('cidade') }}">
         </div>
         <div class="form-group col-md-2">
-            <label for="uf">{{ __('UF') }}</label>
-            <input id="uf" type="text" class="form-control" name="uf" value="{{ isset($aluno) ? $aluno->endereco->uf : old('uf') }}">
-        </div>
-        <div class="form-group col-md-4">
-            <label for="cep">{{ __('CEP') }}</label>
-            <input id="cep" type="text" class="form-control" name="cep" value="{{ isset($aluno) ? $aluno->endereco->cep : old('cep') }}">
+            <label for="uf">{{ __('Estado') }}</label>
+            <select name="uf" id="uf" class="form-control">
+                <option value="">{{ __('Selecione') }}</option>
+                @php($current = isset($aluno) ? $aluno->endereco->uf : old('uf'))
+                @foreach(\App\Models\Endereco::UF_LIST as $value => $name)
+                    <option value="{{ $value }}" {{ $current == $value ? 'selected' : ''}}>{{ $name }}</option>
+                @endforeach
+            </select>
         </div>
     </div>
     <div class="form-row">
         <div class="form-group">
             <input type="submit" value="Salvar" class="btn btn-primary mr-1">
-            <a href="{{ route('alunos.index') }}" class="btn btn-secondary">Voltar</a>
+            <a href="{{ route('alunos.index') }}" class="btn btn-secondary">{{__('Voltar')}}</a>
         </div>
     </div>
 </form>

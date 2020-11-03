@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">
                         <span class="mt-1 h4">{{ __('Matrícula') }}</span>
-                        <a href="{{ route('matriculas.create') }}" class="btn btn-success btn-sm mr-1 float-right">Cadastrar</a>
+                        <a href="{{ route('matriculas.create') }}" class="btn btn-success btn-sm mr-1 float-right">{{__('Cadastrar')}}</a>
                     </div>
                     <div class="card-body">
                         <div class="container-fluid">
@@ -23,8 +23,8 @@
                                         </select>
                                     </div>
                                     <div class="form-group align-self-end d-flex justify-content-end">
-                                        <button type="submit" class="btn btn-primary mr-1">Buscar</button>
-                                        <a href="{{ route('matriculas.index') }}" class="btn btn-secondary">Limpar</a>
+                                        <button type="submit" class="btn btn-primary mr-1">{{__('Buscar')}}</button>
+                                        <a href="{{ route('matriculas.index') }}" class="btn btn-secondary">{{__('Limpar')}}</a>
                                     </div>
                                 </div>
                             </form>
@@ -37,10 +37,10 @@
                                         <thead>
                                             <tr>
                                                 <th scope="col">#</th>
-                                                <th scope="col">Aluno</th>
-                                                <th scope="col">Turma</th>
-                                                <th class="mobile-hide" scope="col">Data Criação</th>
-                                                <th class="mobile-hide" scope="col">Data Atualização</th>
+                                                <th scope="col">{{__('Aluno')}}</th>
+                                                <th scope="col">{{__('Turma')}}</th>
+                                                <th class="mobile-hide" scope="col">{{__('Data Criação')}}</th>
+                                                <th class="mobile-hide" scope="col">{{__('Data Atualização')}}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -54,7 +54,7 @@
                                             </tr>
                                             @empty
                                             <tr>
-                                                <td colspan="6">Nenhum registro encontrado.</td>
+                                                <td colspan="6">{{__('Nenhum registro encontrado.')}}</td>
                                             </tr>
                                             @endforelse
                                         </tbody>

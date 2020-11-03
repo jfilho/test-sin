@@ -29,7 +29,7 @@
     <div class="form-row">
         <div class="form-group">
             <input type="submit" value="Salvar" class="btn btn-primary mr-1">
-            <a href="{{ route('matriculas.index') }}" class="btn btn-secondary">Voltar</a>
+            <a href="{{ route('matriculas.index') }}" class="btn btn-secondary">{{__('Voltar')}}</a>
         </div>
     </div>
 </form>

@@ -13,8 +13,8 @@
             {{ __('Relatórios') }}
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">{{ __('Aluno') }}</a>
-            <a class="dropdown-item" href="#">{{ __('Turmas') }}</a>
+            <a class="dropdown-item" href="{{ route('relatorios.alunos') }}">{{ __('Aluno') }}</a>
+            <a class="dropdown-item" href="{{ route('relatorios.turmas') }}">{{ __('Turmas') }}</a>
         </div>
     </li>
 </ul>

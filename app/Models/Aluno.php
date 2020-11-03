@@ -44,4 +44,16 @@ class Aluno extends Model
     {
         return $this->hasOne(Matricula::class, 'id_aluno', 'id')->withDefault();
     }
+
+    public function setCPFAttribute($cpf)
+    {
+        $this->attributes['cpf'] = preg_replace('/[^0-9]/', '', $cpf);
+    }
+
+    public function getSexoFormattedAttribute()
+    {
+        $sexo = self::SEXO_LIST[$this->sexo] ?? '';
+
+        return $sexo;
+    }
 }

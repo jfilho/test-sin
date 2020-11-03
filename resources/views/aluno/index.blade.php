@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">
                         <span class="mt-1 h4">{{ __('Aluno') }}</span>
-                        <a href="{{ route('alunos.create') }}" class="btn btn-success btn-sm mr-1 float-right">Cadastrar</a>
+                        <a href="{{ route('alunos.create') }}" class="btn btn-success btn-sm mr-1 float-right">{{__('Cadastrar')}}</a>
                     </div>
                     <div class="card-body">
                         <div class="container-fluid">
@@ -18,8 +18,8 @@
                                         <input id="name" type="text" class="form-control" name="nome" value="{{ request()->get('nome') }}">
                                     </div>
                                     <div class="form-group align-self-end d-flex justify-content-end">
-                                        <button type="submit" class="btn btn-primary mr-1">Buscar</button>
-                                        <a href="{{ route('alunos.index') }}" class="btn btn-secondary">Limpar</a>
+                                        <button type="submit" class="btn btn-primary mr-1">{{__('Buscar')}}</button>
+                                        <a href="{{ route('alunos.index') }}" class="btn btn-secondary">{{__('Limpar')}}</a>
                                     </div>
                                 </div>
                             </form>
@@ -32,11 +32,11 @@
                                         <thead>
                                             <tr>
                                                 <th scope="col">#</th>
-                                                <th scope="col">Nome</th>
-                                                <th scope="col">Data Nasc</th>
-                                                <th scope="col">CPF</th>
-                                                <th class="mobile-hide" scope="col">Data Criação</th>
-                                                <th class="mobile-hide" scope="col">Data Atualização</th>
+                                                <th scope="col">{{__('Nome')}}</th>
+                                                <th scope="col">{{__('Data Nasc')}}</th>
+                                                <th scope="col">{{__('CPF')}}</th>
+                                                <th class="mobile-hide" scope="col">{{__('Data Criação')}}</th>
+                                                <th class="mobile-hide" scope="col">{{__('Data Atualização')}}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -51,7 +51,7 @@
                                             </tr>
                                             @empty
                                             <tr>
-                                                <td colspan="6">Nenhum registro encontrado.</td>
+                                                <td colspan="6">{{__('Nenhum registro encontrado.')}}</td>
                                             </tr>
                                             @endforelse
                                         </tbody>

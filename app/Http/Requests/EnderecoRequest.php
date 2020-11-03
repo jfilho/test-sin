@@ -30,7 +30,7 @@ class EnderecoRequest extends FormRequest
             'complemento'   => 'required',
             'bairro'        => 'required',
             'cidade'        => 'required',
-            'uf'            => 'required',
+            'uf'            => ['required', Rule::in(array_keys(\App\Models\Endereco::UF_LIST))],
             'cep'           => 'required',
         ];
     }
