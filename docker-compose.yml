@@ -21,12 +21,3 @@ services:
       - "80:8080"
     links:
       - mysql
-
-  node:
-    image: ambientum/node:11
-    container_name: node-dev
-    command: "bash -c 'npm install && npm run watch'"
-    volumes:
-      - .:/var/www/app
-    ports:
-      - "3000:3000"
