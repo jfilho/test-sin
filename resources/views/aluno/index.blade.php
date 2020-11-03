@@ -44,7 +44,7 @@
                                             <tr>
                                                 <td scope="col"><a href="{{ route('alunos.edit', $aluno->id) }}">{{ $aluno->id }}</a></td>
                                                 <td scope="col">{{ $aluno->nome }}</td>
-                                                <td scope="col">{{ $aluno->data_nasc->format('d/m/Y') }}</td>
+                                                <td scope="col">{{ $aluno->data_nasc ? $aluno->data_nasc->format('d/m/Y') : '-' }}</td>
                                                 <td scope="col">{{ $aluno->cpf }}</td>
                                                 <td class="mobile-hide" scope="col">{{ $aluno->created_at->format('d/m/Y h:i:s') }}</td>
                                                 <td class="mobile-hide" scope="col">{{ $aluno->updated_at->format('d/m/Y h:i:s') }}</td>

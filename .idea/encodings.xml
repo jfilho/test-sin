@@ -22,16 +22,21 @@
     <file url="file://$PROJECT_DIR$/app/Models/Turma.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/app.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/factories/AlunoFactory.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/factories/EnderecoFactory.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/database/factories/UserFactory.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/migrations/2020_10_31_235604_create_alunos_table.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/database/migrations/2020_10_31_235646_create_enderecos_table.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/database/migrations/2020_10_31_235801_create_matriculas_table.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/seeders/TestSeeder.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/docker-compose.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/js/app.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/aluno/create.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/aluno/edit.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/aluno/index.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/aluno/partials/form.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/home.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layouts/partials/flash_message.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layouts/partials/menu.blade.php" charset="UTF-8" />
@@ -44,6 +49,7 @@
     <file url="file://$PROJECT_DIR$/resources/views/relatorio/pdf/alunos.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/relatorio/pdf/turmas.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/relatorio/turmas.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/teste.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/turma/create.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/turma/edit.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/turma/index.blade.php" charset="UTF-8" />

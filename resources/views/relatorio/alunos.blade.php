@@ -39,7 +39,7 @@
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="data_nasc">{{ __('Data Nasc') }}:</label>
-                                            <span class="mt-2">{{ $aluno->data_nasc->format('d/m/Y') }}</span>
+                                            <span class="mt-2">{{ $aluno->data_nasc ? $aluno->data_nasc->format('d/m/Y') : '-' }}</span>
                                         </div>
                                     </div>
                                     <div class="form-row">

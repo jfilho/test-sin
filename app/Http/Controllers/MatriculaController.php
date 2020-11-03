@@ -97,7 +97,17 @@ class MatriculaController extends Controller
      */
     public function update(MatriculaRequest $request, Matricula $matricula)
     {
-        //
+        $matricula->fill($request->all());
+
+        if ($matricula->save()) {
+            return redirect()
+                ->to(route('matriculas.index'))
+                ->with('success', __('Registro atualizado com sucesso!'));
+        }
+
+        return redirect()
+            ->back()->withInput()
+            ->withErrors(__('Error ao atualizar registro!'));
     }
 
     /**
@@ -108,6 +118,14 @@ class MatriculaController extends Controller
      */
     public function destroy(Matricula $matricula)
     {
-        //
+        if ($matricula->delete()) {
+            return redirect()
+                ->to(route('matriculas.index'))
+                ->with('success', __('Registro removido com sucesso!'));
+        }
+
+        return redirect()
+            ->back()->withInput()
+            ->withErrors(__('Error ao remover registro!'));
     }
 }

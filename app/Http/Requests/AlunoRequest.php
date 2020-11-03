@@ -25,10 +25,9 @@ class AlunoRequest extends FormRequest
     public function rules()
     {
         return [
-            'nome'      => 'required',
-            'data_nasc' => 'required|date',
-            'sexo'      => ['required', Rule::in(array_keys(\App\Models\Aluno::SEXO_LIST))],
-            'cpf'       => 'required'
+            'nome'      => 'required|string',
+            'data_nasc' => 'nullable|date',
+            'sexo'      => ['nullable', Rule::in(array_keys(\App\Models\Aluno::SEXO_LIST))],
         ];
     }
 }

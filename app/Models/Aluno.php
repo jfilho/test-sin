@@ -42,7 +42,7 @@ class Aluno extends Model
 
     public function matricula()
     {
-        return $this->hasOne(Matricula::class, 'id_aluno', 'id')->withDefault();
+        return $this->hasOne(Matricula::class, 'id_aluno', 'id');
     }
 
     public function setCPFAttribute($cpf)

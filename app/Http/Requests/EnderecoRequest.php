@@ -26,11 +26,8 @@ class EnderecoRequest extends FormRequest
     {
         return [
             'logradouro'    => 'required',
-            'numero'        => 'required|integer',
-            'complemento'   => 'required',
-            'bairro'        => 'required',
-            'cidade'        => 'required',
-            'uf'            => ['required', Rule::in(array_keys(\App\Models\Endereco::UF_LIST))],
+            'numero'        => 'nullable|integer',
+            'uf'            => ['nullable', Rule::in(array_keys(\App\Models\Endereco::UF_LIST))],
             'cep'           => 'required',
         ];
     }

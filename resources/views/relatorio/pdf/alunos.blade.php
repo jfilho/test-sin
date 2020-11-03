@@ -13,7 +13,7 @@
         </tr>
         <tr>
             <td align="right">{{ __('Data Nasc') }}:</td>
-            <td align="left">{{ $aluno->data_nasc->format('d/m/Y') }}</td>
+            <td align="left">{{ $aluno->data_nasc ? $aluno->data_nasc->format('d/m/Y') : '-' }}</td>
         </tr>
         <tr>
             <td align="right">{{ __('Sexo') }}:</td>

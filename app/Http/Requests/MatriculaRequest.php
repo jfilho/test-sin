@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class MatriculaRequest extends FormRequest
 {
@@ -24,7 +25,7 @@ class MatriculaRequest extends FormRequest
     public function rules()
     {
         return [
-            'id_aluno'  => 'required',
+            'id_aluno'  => ['required', Rule::unique('matriculas', 'id_aluno')->ignore($this->matricula)],
             'id_turma'  => 'required',
         ];
     }

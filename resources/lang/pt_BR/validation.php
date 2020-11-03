@@ -183,5 +183,7 @@ return [
         'data_nasc'             => 'Data Nasc',
         'sexo'                  => 'Sexo',
         'cpf'                   => 'CPF',
+        'id_aluno'              => 'Aluno',
+        'id_turma'              => 'Turma',
     ],
 ];

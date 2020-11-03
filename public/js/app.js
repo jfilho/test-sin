@@ -49767,16 +49767,32 @@ Vue.use(vue_the_mask__WEBPACK_IMPORTED_MODULE_0___default.a);
 
 var app = new Vue({
   el: '#app',
+  data: function data() {
+    return {
+      search_message: 'Digite o CEP para consulta.'
+    };
+  },
   methods: {
     getzipcode: function getzipcode() {
+      this.search_message = 'Buscando...';
+      var that = this;
       var zipcode = document.getElementById("cep").value.replace(/\D/g, '');
       axios.get("https://viacep.com.br/ws/".concat(zipcode, "/json/")).then(function (response) {
-        document.getElementById('logradouro').value = response.data.logradouro;
-        document.getElementById('complemento').value = response.data.complemento;
-        document.getElementById('bairro').value = response.data.bairro;
-        document.getElementById('cidade').value = response.data.localidade;
-        document.getElementById('uf').value = response.data.uf;
-        console.log(response);
+        if (response.data.erro) {
+          that.search_message = 'Erro ao realizar consulta.';
+          document.getElementById('logradouro').value = '';
+          document.getElementById('complemento').value = '';
+          document.getElementById('bairro').value = '';
+          document.getElementById('cidade').value = '';
+          document.getElementById('uf').value = '';
+        } else {
+          that.search_message = 'Digite o CEP para consulta.';
+          document.getElementById('logradouro').value = response.data.logradouro;
+          document.getElementById('complemento').value = response.data.complemento;
+          document.getElementById('bairro').value = response.data.bairro;
+          document.getElementById('cidade').value = response.data.localidade;
+          document.getElementById('uf').value = response.data.uf;
+        }
       });
     }
   }

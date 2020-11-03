@@ -13,7 +13,7 @@
         </div>
         <div class="form-group col-md-4">
             <label for="data_nasc">{{ __('Data Nasc') }}</label>
-            <input id="data_nasc" type="date" class="form-control" name="data_nasc" value="{{ isset($aluno) ? $aluno->data_nasc->format('Y-m-d') : old('data_nasc') }}">
+            <input id="data_nasc" type="date" class="form-control" name="data_nasc" value="{{ isset($aluno) && $aluno->data_nasc ? $aluno->data_nasc->format('Y-m-d') : old('data_nasc') }}">
         </div>
     </div>
     <div class="form-row">
@@ -39,6 +39,7 @@
         <div class="form-group col-md-2" >
             <label for="cep">{{ __('CEP') }}</label>
             <input id="cep" @blur="getzipcode" type="text" v-mask="['#####-###']" class="form-control" name="cep" value="{{ isset($aluno) ? $aluno->endereco->cep : old('cep') }}">
+            <small>@{{ search_message }}</small>
         </div>
     </div>
     <div class="form-row">

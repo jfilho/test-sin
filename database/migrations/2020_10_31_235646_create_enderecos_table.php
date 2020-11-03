@@ -17,11 +17,11 @@ class CreateEnderecosTable extends Migration
             $table->id();
             $table->foreignId('id_aluno')->constrained('alunos')->onDelete('cascade');
             $table->string('logradouro');
-            $table->smallInteger('numero');
-            $table->string('complemento');
-            $table->string('bairro');
-            $table->string('cidade');
-            $table->string('uf', 2);
+            $table->integer('numero')->nullable();
+            $table->string('complemento')->nullable();
+            $table->string('bairro')->nullable();
+            $table->string('cidade')->nullable();
+            $table->string('uf', 2)->nullable();
             $table->string('cep', 8);
             $table->timestamps();
         });
